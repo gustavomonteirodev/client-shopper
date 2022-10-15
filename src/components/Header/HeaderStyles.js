@@ -1,6 +1,5 @@
 import styled from "styled-components"
 
-
 export const HeaderContainer = styled.header`
     display: flex;
     border-top: 6px solid #2da77a;
@@ -9,14 +8,16 @@ export const HeaderContainer = styled.header`
     background-color: #FFFFFF; 
     position: fixed;
     width: 100%;
-    box-shadow: 0px 5px 20px rgb(0 45 98/ 6%);
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px;
     top: 0;
     left: 0;
     height: 13vh;
     img {
         width: 150px;
         }
-
+        img:hover {
+        cursor: pointer;
+        }
 `
 
 export const ButtonStyled = styled.div`

@@ -6,11 +6,14 @@ export const goToHome = (navigate) => {
     navigate("/")
 }
 
-
 export const goToStock = (navigate) => {
-    navigate("/stock")
+    navigate("/estoque")
 }
 
 export const goToHistoric = (navigate) => {
-    navigate("/historic")
+    navigate("/historico")
+}
+
+export const goToCart = (navigate) => {
+    navigate("/carrinho")
 }
