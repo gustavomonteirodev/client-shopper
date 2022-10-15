@@ -1,10 +1,16 @@
 import React from "react";
+import GlobalStyle from "./GlobalStyles"
+import Router from "./routes/Router"
+// import GlobalState from "./Global/GlobalState";
 
+const App = () =>  {
 
-function App() {
   return (
-    <div className="App">
-      oi
+    <div >
+    {/* <GlobalState > */}
+       <Router /> 
+       <GlobalStyle />
+       {/* </GlobalState> */}
     </div>
   );
 }
