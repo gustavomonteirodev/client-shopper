@@ -1,11 +1,13 @@
 import React from "react";
+import {HomeContainer} from "./HomePageStyles"
 
-
-const  HomePage = () => {
+const HomePage = () => {
+  
   return (
-    <div className="HomePage">
-      <h1>Home!</h1>
-    </div>
+    <HomeContainer>
+      <h1>Olá</h1>
+      <h1>Olá</h1>
+    </HomeContainer>
   );
 }
 

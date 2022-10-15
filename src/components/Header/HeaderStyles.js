@@ -14,10 +14,10 @@ export const HeaderContainer = styled.header`
     height: 13vh;
     img {
         width: 150px;
-        }
-        img:hover {
+    }
+    img:hover {
         cursor: pointer;
-        }
+    }
 `
 
 export const ButtonStyled = styled.div`
