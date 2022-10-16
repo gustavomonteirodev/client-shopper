@@ -1,11 +1,12 @@
 import React from "react";
+import { ContainerStockCard } from './StockCardStyles'
 
-
-const  StockCard = () => {
+const StockCard = (props) => {
   return (
-    <div className="StockCard">
-      <h1>StockCard!</h1>
-    </div>
+    <ContainerStockCard>
+      <h3>NOME DO PRODUTO: {props.product.name}</h3>
+      <p>ITENS DISPONÍVEIS: {props.product.qty_stock}</p>
+    </ContainerStockCard>
   );
 }
 
