@@ -22,7 +22,7 @@ const ProductCard = (props) => {
       <Button
         onClick={() => props.addToCart(props.product)}
         variant="outlined"
-        color="secondary"
+        color="primary"
         className={classes.button}
         startIcon={<AddIcon />}
       > Adicionar</Button>
