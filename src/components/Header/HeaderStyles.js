@@ -12,6 +12,7 @@ export const HeaderContainer = styled.header`
     top: 0;
     left: 0;
     height: 13vh;
+    z-index: 9999;
     img {
         width: 150px;
     }

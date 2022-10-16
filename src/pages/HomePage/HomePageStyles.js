@@ -6,6 +6,5 @@ export const HomeContainer = styled.div`
     grid-template-columns: repeat(5, 1fr);
     grid-auto-rows: auto;
     grid-gap: 1px;
-  
 
 `
