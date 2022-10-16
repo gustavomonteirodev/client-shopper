@@ -1,5 +1,5 @@
 import React from "react";
-import { Forms, TotalValue } from "./CartPageStyles"
+import { Forms, TotalValue, CartContainer, CartStyled } from "./CartPageStyles"
 import { Button } from "@mui/material";
 import GlobalStateContext from "../../Global/GlobalContext"
 import { useContext } from "react"
@@ -36,23 +36,25 @@ const CartPage = () => {
     clear()
   }
   return (
-    <div>
+    <CartContainer>
+      <CartStyled>
       {cartItems}
+      </CartStyled>
         <div>
           <TotalValue>
-            <h3>Valor total da compra: R$ <b>{states.totalPrice.toFixed(2)}</b></h3>
+            <h3>VALOR TOTAL :</h3><p>R$ {states.totalPrice.toFixed(2)}</p> 
           </TotalValue>
           <Forms onSubmit={submitRequest}>
-            <label htmlFor='name'><b>Insira seu nome:</b></label>
+            <label htmlFor='name'><p>DIGITE SEU NOME E SOBRENOME:</p></label>
             <input
               name="clientName"
-              placeholder="Seu nome"
+              placeholder="Nome e sobrenome"
               value={form.clientName}
               onChange={handleForm}
               required
             />
 
-            <label htmlFor='date'><b>Selecione uma data para a entrega:</b></label>
+            <label htmlFor='date'><p>AGENDE UMA DATA PARA ENTREGA:</p></label>
             <input
               type="date"
               name="dueDate"
@@ -63,7 +65,7 @@ const CartPage = () => {
             <Button type="submit" variant="contained" color="primary">Finalizar compra!</Button>
           </Forms>
         </div>
-    </div>
+    </CartContainer>
   );
 }
 

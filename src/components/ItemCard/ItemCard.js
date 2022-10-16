@@ -1,10 +1,11 @@
 import { Button } from "@mui/material";
 import React from "react";
-import { ButtonStyles } from "./ItemCardStyles";
+import { ButtonStyles, ItemCartStyled, BorderLine } from "./ItemCardStyles";
 
 const ItemCard = (props) => {
   return (
     <>
+    <ItemCartStyled>
       <h5>{props.item.name}</h5>
       <p>R$: {props.item.price}</p>
       <ButtonStyles>
@@ -19,6 +20,8 @@ const ItemCard = (props) => {
         >+</Button>
         <Button onClick={() => props.removeFromCart(props.item)}>Remover</Button>
       </ButtonStyles>
+    </ItemCartStyled>
+    <BorderLine></BorderLine>
     </>
   );
 }
