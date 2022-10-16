@@ -1,21 +1,101 @@
-// import React, { useState } from 'react'
-// import GlobalContext from './GlobalContext'
+import React, { useState, useEffect } from 'react'
+import GlobalContext from './GlobalContext'
+import { BASE_URL } from "../constants/url";
+import { useRequestData } from "../hooks/useRequestData";
+import ProductCard from "../components/ProductCard/ProductCard";
+import ItemCard from "../components/ItemCard/ItemCard";
 
-// const GlobalState = (props) => {
+const GlobalState = (props) => {
+    const { data } = useRequestData(`${BASE_URL}/products`, undefined)
+    const [cart, setCart] = useState([])
+    const [totalPrice, setTotalPrice] = useState(0)
 
-//     const [cep, setCep] = useState("");
-//     const [dados, setDados] = useState("");
-//     const [errorDataCep, setErrorDataCep] = useState("");
-//     const [mostrarElement, setMostrarElement] = useState(false)
+    const addToCart = (product) => {
+        const newProduct = { ...product, productQuantity: 1 }
+        const newCart = [...cart, newProduct]
+        setCart(newCart)
+      }
+    
+      const removeFromCart = (product) => {
+    
+        const newCart = cart.filter((item) => {
+          return product.id !== item.id
+        })
+        setCart(newCart)
+      }
+    
+      const increaseQty = (product) => {
+        const productQuantity = product.productQuantity + 1;
+        const newProduct = { ...product, productQuantity }
+        updateCart(newProduct)
+      }
+    
+      const decreaseQty = (product) => {
+        const productQuantity = product.productQuantity - 1;
+        const newProduct = { ...product, productQuantity }
+        updateCart(newProduct)
+      }
+    
+      const updateCart = (productToUpdate) => {
+        const newCart = cart.map((product) => {
+          if (product.id === productToUpdate.id) {
+            return productToUpdate
+          }
+    
+          return product
+        })
+    
+        setCart(newCart)
+      }
+    
+      const calculateTotalPrice = () => {
+        let sum = 0
+    
+        for (let item of cart) {
+          let qty = item.productQuantity
+          let price = item.price
+          sum += price * qty
+        }
+        setTotalPrice(sum)
+      }
+    
+      useEffect(() => {
+        calculateTotalPrice()
+      }, [cart])
 
-// const states = {cep, dados, errorDataCep, mostrarElement}
-// const setters = {setCep, setDados, setErrorDataCep, setMostrarElement}
+      
+  const productsShopper = data && data.map((product) => {
+    return (
+      <ProductCard
+        key={product.id}
+        product={product}
+        addToCart={addToCart}
+      />
+    )
+  })
 
-// return (
-//     <GlobalContext.Provider value={{states, setters}}>
-//       {props.children}
-//     </GlobalContext.Provider>
-// )
-// }
+  const cartItems = cart.map((item) => {
+    return (
+      <ItemCard
+        key={item.id}
+        item={item}
+        increaseQty={increaseQty}
+        decreaseQty={decreaseQty}
+        removeFromCart={removeFromCart}
+      />
+    )
+  })
 
-// export default GlobalState
+const states = {cart, totalPrice }
+const setters = {setCart, setTotalPrice}
+
+return (
+    <GlobalContext.Provider value={{states, setters,data, 
+    addToCart, removeFromCart, increaseQty, decreaseQty, updateCart,
+    productsShopper, cartItems }}>
+      {props.children}
+    </GlobalContext.Provider>
+)
+}
+
+export default GlobalState;

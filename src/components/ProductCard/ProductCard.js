@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme) => ({
 
 const ProductCard = (props) => {
   const classes = useStyles();
+  
   return (
     <CardContainer>
       <p>{props.product.name}</p>
