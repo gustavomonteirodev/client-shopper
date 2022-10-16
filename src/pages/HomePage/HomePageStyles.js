@@ -8,13 +8,32 @@ export const HomeContainer = styled.div`
     grid-gap: 1px;
 
 `
-export const Circular = styled.div`
+export const Loader = styled.div`
+    position: absolute;
+    left:50%;
+    top: 50%; 
+    transform: translate(-50%,-50%);
+    border: 5px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 5px solid #2da77a;
+    width: 50px;
+    height: 50px;
+    -webkit-animation: spin 1s linear infinite; /* Safari */
+    animation: spin 1s linear infinite;
 
-display: flex; 
-margin-left: 50%;
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 
 `
-
 
 export const Forms = styled.form`
     display: flex;

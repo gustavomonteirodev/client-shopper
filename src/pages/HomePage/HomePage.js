@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react"
-import { HomeContainer, Circular, TotalValue, Forms } from "./HomePageStyles";
+import { HomeContainer, Loader, TotalValue, Forms } from "./HomePageStyles";
 import { useRequestData } from "../../hooks/useRequestData";
 import { BASE_URL } from "../../constants/url";
 import useForm from "../../hooks/useForm";
 import ItemCard from "../../components/ItemCard/ItemCard";
 import ProductCard from "../../components/ProductCard/ProductCard";
-import CircularProgress from "@mui/material/CircularProgress";
 import { createRequest } from "../../services/request"
 import { Button } from "@mui/material";
+import Box from '@mui/material/Box';
+
 
 const HomePage = () => {
 
@@ -124,7 +125,7 @@ const HomePage = () => {
   return (
     <>
       <HomeContainer>
-        {data ? productsShopper : <Circular> <CircularProgress /> </Circular>}
+        {data ? productsShopper : <Loader></Loader>}
       </HomeContainer>
 
       <div>

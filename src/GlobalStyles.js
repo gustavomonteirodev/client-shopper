@@ -7,8 +7,6 @@ const GlobalStyle = createGlobalStyle`
 * {
   scrollbar-width: thin;
   font-family: 'Nunito', sans-serif;
-  margin: 0;
-  padding: 0;
 }
 
 *::-webkit-scrollbar {
