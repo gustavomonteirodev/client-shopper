@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const ButtonAndTitle = styled.div`
+export const Title = styled.div`
     margin-top: 20vh;
     h3 {
         display: flex;
