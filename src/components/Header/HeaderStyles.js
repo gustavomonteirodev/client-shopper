@@ -26,5 +26,6 @@ export const ButtonStyled = styled.div`
     
     button {
         border-radius: 20px;
+        padding: 5px 30px 5px 30px;
     }
 `

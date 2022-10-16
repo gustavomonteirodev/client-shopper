@@ -1,11 +1,31 @@
 import React from "react";
+import { CardContainer } from "./ProductCardStyles";
+import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
+import { Button } from "@mui/material";
+import AddIcon from '@material-ui/icons/Add';
+
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme) => ({
+  button: {
+    margin: theme.spacing(1),
+  },
+}));
 
 
-const  ProductCard = () => {
+const ProductCard = (props) => {
+  const classes = useStyles();
   return (
-    <div className="ProductCard">
-      <h1>ProductCard!</h1>
-    </div>
+    <CardContainer>
+      <p>{props.product.name}</p>
+      <h4>R${props.product.price}</h4>
+      <Button
+        variant="outlined"
+        color="secondary"
+        className={classes.button}
+        startIcon={<AddIcon />}
+      > Adicionar</Button>
+    </CardContainer>
   );
 }
 
