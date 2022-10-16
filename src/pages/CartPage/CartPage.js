@@ -9,6 +9,7 @@ import { createRequest } from '../../services/request'
 const CartPage = () => {
 
   const { states, cartItems } = useContext(GlobalStateContext);
+
   const [form, handleForm, clear] = useForm(
     {
       name: "",

@@ -4,16 +4,21 @@ import { BASE_URL } from "../constants/url";
 import { useRequestData } from "../hooks/useRequestData";
 import ProductCard from "../components/ProductCard/ProductCard";
 import ItemCard from "../components/ItemCard/ItemCard";
+import { ToastContainer, toast } from 'react-custom-alert';
+import 'react-custom-alert/dist/index.css';
 
 const GlobalState = (props) => {
     const { data } = useRequestData(`${BASE_URL}/products`, undefined)
     const [cart, setCart] = useState([])
     const [totalPrice, setTotalPrice] = useState(0)
+    const alertSuccess = () => toast.success('Adicionado ao Carrinho! 🤩');
+    const alertRemoved = () => toast.success('Item removido! 🙁');
 
     const addToCart = (product) => {
         const newProduct = { ...product, productQuantity: 1 }
         const newCart = [...cart, newProduct]
         setCart(newCart)
+        alertSuccess()
       }
     
       const removeFromCart = (product) => {
@@ -22,6 +27,7 @@ const GlobalState = (props) => {
           return product.id !== item.id
         })
         setCart(newCart)
+        alertRemoved()
       }
     
       const increaseQty = (product) => {

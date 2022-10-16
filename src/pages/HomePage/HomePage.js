@@ -4,7 +4,7 @@ import { useContext } from "react"
 
 const HomePage = () => {
 
-  const { data, cartItems, productsShopper } = useContext(GlobalStateContext);
+  const { data, productsShopper } = useContext(GlobalStateContext);
 
   return (
     <>

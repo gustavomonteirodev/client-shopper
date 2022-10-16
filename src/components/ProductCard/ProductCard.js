@@ -2,7 +2,6 @@ import React from "react";
 import { CardContainer } from "./ProductCardStyles";
 import { Button } from "@mui/material";
 import AddIcon from "@material-ui/icons/Add";
-
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
@@ -11,11 +10,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-
 const ProductCard = (props) => {
   const classes = useStyles();
-  
+
   return (
+
     <CardContainer>
       <p>{props.product.name}</p>
       <h4>R${props.product.price}</h4>

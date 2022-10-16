@@ -20,7 +20,6 @@ export const ItemCartStyled = styled.form`
         width: 25%;
     }
 
-    margin-bottom: 10px; 
 `
 export const BorderLine = styled.form`
 display: flex;
