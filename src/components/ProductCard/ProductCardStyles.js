@@ -27,4 +27,5 @@ export const CardContainer = styled.div`
         border-radius: 20px;
     }
 
+
 `

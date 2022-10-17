@@ -5,6 +5,13 @@ export const CartContainer = styled.div`
     display: flex; 
     align-items: center;
     flex-direction: column;
+
+    @media screen and (max-width:1000px){
+    justify-content: center;
+    width: 90%;
+    border-bottom: none;
+    }
+
 `
 export const TotalValue = styled.div`
     display: flex;
@@ -24,6 +31,12 @@ export const TotalValue = styled.div`
         font-size: 23px;
         color:#2da77a; 
         padding-left: 5px;
+    }
+
+    @media screen and (max-width:1000px){
+    width: 100%;
+    padding-top: 5vh;
+    border-bottom: none;
     }
 `
 export const Forms = styled.form`

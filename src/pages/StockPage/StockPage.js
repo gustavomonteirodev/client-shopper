@@ -11,7 +11,7 @@ const StockPage = () => {
 
   const productsList = data && data.map((product) => {
     return (
-      <StockCard product={product} />
+      <StockCard product={product} key={product.id} />
     )
   })
 

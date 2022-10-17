@@ -16,9 +16,14 @@ const GlobalState = (props) => {
 
     const addToCart = (product) => {
         const newProduct = { ...product, productQuantity: 1 }
-        const newCart = [...cart, newProduct]
-        setCart(newCart)
-        alertSuccess()
+        if ((product.length > 3)) {
+          return;
+        } else {
+          const newCart = [...cart, newProduct];
+         
+          setCart(newCart);
+          alertSuccess()
+        }
       }
     
       const removeFromCart = (product) => {

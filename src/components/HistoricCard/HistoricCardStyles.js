@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const ContainerHistoricCard = styled.div`
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -19,5 +19,8 @@ export const ContainerHistoricCard = styled.div`
         font-weight: 300;
         font-size: 15px; 
         color:#2da77a
-    }
+    } */
+    border: 1px solid black;
+    width: 600px;
+    padding-left: 50px;
 `

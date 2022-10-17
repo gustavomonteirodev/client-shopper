@@ -19,6 +19,12 @@ export const HeaderContainer = styled.header`
     img:hover {
         cursor: pointer;
     }
+
+    @media screen and (max-width:1000px){
+    display: flex; 
+    flex-direction: column;
+    height: 17vh;
+}
 `
 
 export const ButtonStyled = styled.div`
@@ -29,4 +35,15 @@ export const ButtonStyled = styled.div`
         border-radius: 20px;
         padding: 5px 30px 5px 30px;
     }
+
+    @media screen and (max-width:1000px){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3%;
+    button {
+        width: 25%;
+    }
+}
 `
+

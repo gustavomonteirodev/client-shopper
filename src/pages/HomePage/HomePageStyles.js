@@ -7,6 +7,12 @@ export const HomeContainer = styled.div`
     grid-auto-rows: auto;
     grid-gap: 1px;
 
+    @media screen and (max-width:1000px){
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    margin-left: 15%;
+     }
+
 `
 export const Loader = styled.div`
     position: absolute;

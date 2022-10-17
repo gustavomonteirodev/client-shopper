@@ -20,4 +20,11 @@ export const ContainerStockCard = styled.div`
         font-size: 15px; 
         color:#2da77a
     }
+
+    
+    @media screen and (max-width:1000px){
+        padding-left: 0;
+        margin-left: 0;
+        margin: 0 auto;
+    }
 `
