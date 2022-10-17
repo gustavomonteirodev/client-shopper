@@ -2,6 +2,12 @@
 
 Projeto de front-end desenvolvido como uma das etapas do processo seletivo para vaga de Full-stack Junior. Página web consumindo API que simula um sistema de pedidos de um supermercado, com o foco de criar, mostrar e editar pedidos, como também exibir produtos disponíveis em estoque e lista de pedidos efetuados.
 
+## 📸 Demo Gif Web/Mobile
+![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/104602579/196077491-720a2fb3-b058-4366-99be-8f717dce6fc3.gif)
+
+
+![ezgif com-gif-maker (3)](https://user-images.githubusercontent.com/104602579/196077496-4ab8f0a9-692b-41aa-b586-520c917aafda.gif)
+
 ## ⚛️ Tecnologias 
 - HTML5 
 - Styled-Components
