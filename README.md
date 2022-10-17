@@ -32,5 +32,7 @@ https://documenter.getpostman.com/view/21555811/2s8479ywdr
 - React Dependências -> npm install
 - Axios -> npm i axios
 - Material UI -> npm install @mui/material @emotion/react @emotion/styled @material-ui/icons
+- Styled Components -> npm i styled-components
+- Router -> npm i react-router-dom
 
 Copyright © Gustavo Monteiro - Maceió-AL, 2022
