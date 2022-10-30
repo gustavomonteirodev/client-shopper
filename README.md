@@ -1,6 +1,6 @@
 # 🛒 client-shopper 
 
-Projeto de front-end desenvolvido como uma das etapas do processo seletivo para vaga de Full-stack Junior. Página web consumindo API que simula um sistema de pedidos de um supermercado, com o foco de criar, mostrar e editar pedidos, como também exibir produtos disponíveis em estoque e lista de pedidos efetuados.
+ Página web consumindo API criada por mim que simula um sistema de pedidos de um supermercado, com o foco de criar, mostrar e editar pedidos, como também exibir produtos disponíveis em estoque e lista de pedidos efetuados.
 
 ## 📸 Demo Gif Web/Mobile
 ![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/104602579/196077491-720a2fb3-b058-4366-99be-8f717dce6fc3.gif)
